@@ -176,19 +176,31 @@ svg {
   fill: var(--secondary-color);
 }
 
+
+
 .nav-link > p {
   margin-bottom: 28px;
 }
 
-.nav-link > svg {
-  margin-left: auto;
-  margin-right: auto;
-  fill: inherit;
- }
+ .nav-link:hover > .decorate-line ,
+.nav-link:focus > .decorate-line {
+  opacity: 1;
+}
+
+.decorate-line {
+width: 100%;
+height: 4px;
+border-radius: 2px;
+background-color: var(--secondary-color);
+opacity: 0;
+}
 
 .current-page{
   color: var(--secondary-color);
-  fill: var(--secondary-color);
+}
+
+.current-page > .decorate-line {
+  opacity: 1;
 }
 
 address {
@@ -238,7 +250,7 @@ address {
 /* Main */
 
 .hero {
-  width: 1600px;
+  max-width: 1600px;
   height: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -502,7 +514,7 @@ footer > .container {
   align-items: baseline;
   padding-top: 60px;
   padding-bottom: 60px;
-}
+ }
 
 .footer-contacts {
   margin-right: 69px;
@@ -588,9 +600,7 @@ footer > .container {
 }
 
 .sign-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
 
   width: 200px;
   height: 50px;
@@ -607,15 +617,20 @@ footer > .container {
   letter-spacing: 0.06em;
 }
 
-.sign-icon{
-  fill: var(--primary-white-color);
-
-  width: 24px;
-  height: 24px;
+.sign-button > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.sign-button > span {
-  margin-right: 10px;
+.sign-button > span::after {
+  display: block;
+  content: "";
+  background-image: url("../images/icon-send.svg");
+  fill: var(--primary-black-color);
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
 }
 
 /* Portfolio.html */
@@ -660,7 +675,9 @@ footer > .container {
 
 .gallery-item:hover,
 .gallery-item-focus {
-  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+  box-shadow: 
+    1px 4px 6px rgba(0, 0, 0, 0.16), 
+    0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
