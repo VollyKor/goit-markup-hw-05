@@ -87,6 +87,10 @@ button {
   padding: 0px;
 }
 
+button:focus {
+  outline: none;
+}
+
 a {
   /* color: #000; */
   font-family: inherit;
