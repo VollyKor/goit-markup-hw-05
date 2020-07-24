@@ -87,9 +87,13 @@ button {
   padding: 0px;
 }
 
-button:focus {
+/* button:focus {
   outline: none;
-}
+} */
+/* 
+button:hover{
+  cursor: pointer;
+} */
 
 a {
   /* color: #000; */
@@ -161,21 +165,25 @@ svg {
 
 .nav-link {
   display: block;
+
   padding-top: 32px;
   padding-bottom: 32px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
   color: var(--primary-black-color);
   fill: none;
+
+  transition: color 250ms var(--time-function);
 }
 
 .nav-link:hover,
 .nav-link:focus {
   color: var(--secondary-color);
   fill: var(--secondary-color);
-  transition: color 250ms var(--time-function);
 }
 
 .current-page{
@@ -185,6 +193,7 @@ svg {
 
 .current-page > p::after {
   content: '';
+
   position: absolute;
   bottom: 0;
   left: 0;
@@ -229,10 +238,13 @@ address {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  transition: color 250ms var(--time-function), fill 250ms var(--time-function);
 }
 
 .address-item > svg {
   margin-right: 10px;
+
 }
 
 .address-item:hover,
@@ -250,6 +262,7 @@ address {
   margin-right: auto;
   padding-top: 200px;
   padding-bottom: 200px;
+
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.8),
       rgba(47, 48, 58, 0.8)
@@ -267,7 +280,6 @@ address {
   font-size: 44px;
   line-height: 1.36;
   text-align: center;
-
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -474,13 +486,14 @@ section.team {
 }
 
 .bio-link{
-  fill: var(--client-border-color);;
+  fill: var(--client-border-color);
+  border-radius: 50%;
+  transition: background-color 250ms var(--time-function), fill 250ms var(--time-function);
 }
 
 .bio-link:hover,
 .bio-link:focus {
   background-color: var(--secondary-color);
-  border-radius: 50%;
   fill: var(--primary-white-color);
 }
 
@@ -515,6 +528,8 @@ section.team {
 
   justify-content: center;
   align-items: center;
+
+  transition: border-color 250ms var(--time-function), fill 250ms var(--time-function);
 }
 
 .client-link:hover,
@@ -564,21 +579,18 @@ footer > .container {
   color: var(--secondary-white-color);
 }
 
-.footer-address {
+.footer-address a {
   padding: 0px;
+  transition: color 250ms var(--time-function);
 }
 
 .footer-address li:not(:last-child) {
   margin-bottom: 9px;
 }
 
-.footer-city:hover,
-.footer-city:focus,
-.footer-mail:hover,
-.footer-mail:focus,
-.footer-phone:hover,
-.footer-phone:focus {
-  color: var(--secondary-color);
+.footer-address a:hover,
+.footer-address a:focus {
+  color: var(--secondary-color); 
 }
 
 .social-link {
@@ -589,6 +601,7 @@ footer > .container {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   
+  transition: background-color 250ms var(--time-function);
 }
 
 .footer-social {
@@ -669,8 +682,12 @@ footer > .container {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
-
   text-align: center;
+
+  transition: 
+    background-color 250ms var(--time-function), 
+    color 250ms var(--time-function),
+    box-shadow 250ms var(--time-function);
 }
 
 .gallery-button:hover,
@@ -700,7 +717,7 @@ footer > .container {
   margin-right: 30px;
   margin-bottom: 30px;
 
-  
+  transition: box-shadow 250ms var(--time-function)
 }
 
 .gallery-item:hover,
@@ -781,5 +798,5 @@ overflow: hidden;
   line-height: 1.56;
 
   transition: transform 250ms var(--time-function);
-  transform: translateY(100%);
+  transform: translateY(calc(100% + 1px));
 }
