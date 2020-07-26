@@ -231,8 +231,8 @@ address {
   color: var(--grey-color);
   fill: #757575;
 
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 
   font-weight: 500;
   font-size: 14px;
